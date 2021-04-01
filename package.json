@@ -1,0 +1,23 @@
+{
+  "name": "golf-card-game",
+  "version": "1.0.0",
+  "description": "Play golf over the internet using node-js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Penguins904/golf-card-game.git"
+  },
+  "author": "Jake Jenkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Penguins904/golf-card-game/issues"
+  },
+  "homepage": "https://github.com/Penguins904/golf-card-game#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socketio": "^1.0.0"
+  }
+}
