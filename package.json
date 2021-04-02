@@ -4,7 +4,7 @@
   "description": "Play golf over the internet using node-js",
   "main": "server.js",
   "scripts": {
-    "start": "nodejs server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
