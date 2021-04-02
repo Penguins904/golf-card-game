@@ -115,3 +115,8 @@ class Player {
 		this.socket.emit("cards", this.cards);
 	}
 }
+
+exports.Game = Game;
+exports.Card = Card;
+exports.Player = Player;
+exports.Deck = Deck;
