@@ -3,7 +3,7 @@ const socketio = require('socketio');
 const path = require('path');
 
 const app = express();
-const PORT = 80;
+const PORT = 8080;
 
 //set static folder
 app.use(express.static(path.join(__dirname, "public")));
