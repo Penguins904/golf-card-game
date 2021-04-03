@@ -34,6 +34,6 @@ socket.on("start", () => {
   console.log("Game has Started");
 });
 
-socket.on("playerjoined" (num) => {
+socket.on("playerjoined", (num) => {
 	alert(`${num}/4 players`);
 });
