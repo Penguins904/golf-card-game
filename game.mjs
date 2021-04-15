@@ -192,7 +192,7 @@ class Player {
 		this.cards = cards;
 		let output = [];
 		cards.forEach((card, i) => {
-			output.push(card.toHTML());
+		output.push(card.toHTML());
 		});
 		this.socket.emit("cards", output);
 		console.log(`sent cards to player ${this.index}`);
