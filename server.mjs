@@ -17,12 +17,17 @@ io.on("connection", socket => {
   console.log("socket connected");
 	let joinedGame = false;
 	games.forEach((game, i) => {
-		if (game.players.length != Game.numOfPlayers && !joinedGame) {
+		if (game.players.length < Game.numOfPlayers) {
 			let player = new Player(socket);
 			player.socket.join(game.room);
 			game.players.push(player);
 			io.to(game.room).emit("playerjoined", game.players.length);
 			joinedGame = true;
+			if (game.players.length == Game.numOfPlayers) {
+				console.log("game is starting");
+				game.start();
+			}
+			return;
 		}
 	});
 	if(!joinedGame){
@@ -35,3 +40,5 @@ io.on("connection", socket => {
 app.use(express.static("public"));
 
 server.listen(PORT, () => console.log(`Server is running on port: ${PORT}`));
+
+export {io};
